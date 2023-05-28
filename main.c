@@ -6,8 +6,10 @@
  */
 int main(void)
 {
-	int len;
-
-	len = _printf("Print a simple sentence");
-	return (len);
+	int ko = 5;
+	_printf("Print a %s simple sentence", "HIND");
+	_printf("Print a %d simple sentence",ko);
+	_printf("Print a %i simple sentence",ko);
+	_printf("Print a %c simple sentence",'H');
+	return (1);
 }
