@@ -117,5 +117,5 @@ long int convert_number(long int num, int size);
 long int convert_unsgnd(unsigned long int num, int size);
 
 
-#endif 
+#endif
 

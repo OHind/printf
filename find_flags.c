@@ -10,7 +10,6 @@
 	/* 1 2 4 8  16 */
 int find_flags(const char *format, int *i)
 {
-	
 	int j, k;
 	int flag = 0;
 	const char FLAGS_CH[] = {'-', '+', '0', '#', ' ', '\0'};

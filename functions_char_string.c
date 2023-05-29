@@ -26,7 +26,7 @@ int printf_char(va_list types, char buffer[],
  * @flags:  calculates the active flags
  * @width: width.
  * @precision: Precision specification
- * @size: size 
+ * @size: size
  * Return: num of chars printed
  */
 int printf_string(va_list types, char buffer[],
@@ -102,7 +102,7 @@ int printf_percent(va_list types, char buffer[],
 /**
  * printf_int - function to print int
  * @types: list of arguments
- * @buffer: Buffer array 
+ * @buffer: Buffer array
  * @flags:  calculates active flags
  * @width: width.
  * @precision: Precision specification
@@ -149,7 +149,7 @@ int printf_int(va_list types, char buffer[],
  * @flags:  calculates active flags
  * @width: width.
  * @precision: Precision specification
- * @size: Size 
+ * @size: Size
  * Return: num of char printed.
  */
 int printf_binary(va_list types, char buffer[],
@@ -166,7 +166,7 @@ int printf_binary(va_list types, char buffer[],
 	UNUSED(size);
 
 	n = va_arg(types, unsigned int);
-            /*m= (2 ^ 31) */
+	/*m= (2 ^ 31) */
 	m = 2147483648;
 	A[0] = n / m;
 	for (i = 1; i < 32; i++)
