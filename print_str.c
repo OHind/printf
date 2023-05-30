@@ -6,16 +6,16 @@
  */
 int print_str(va_list string)
 {
-	int len;
-	char *str;
+	int l;
+	char *s;
 
-	str = va_arg(string, char *);
+	s = va_arg(string, char *);
 
-	if (str == NULL)
-		str = "(null)";
-	len = 0;
+	if (s == NULL)
+		s = "(null)";
+	l = 0;
 
-	while (str[len] != '\0')
-		len = len + _putchar(str[len]);
-	return (len);
+	while (str[l] != '\0')
+		l = l + _putchar(s[l]);
+	return (l);
 }

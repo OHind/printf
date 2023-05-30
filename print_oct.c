@@ -4,11 +4,11 @@
  * @octo: list passed
  * Return: updated count
  */
-int print_oct(va_list octo)
+int print_oct(va_list oct)
 {
 	int count = 0, i;
-	int *arr;
-	unsigned int n = va_arg(octo, unsigned int);
+	int *ar;
+	unsigned int n = va_arg(oct, unsigned int);
 	unsigned int tmp = n;
 
 	while (n / 8 != 0)
@@ -20,13 +20,13 @@ int print_oct(va_list octo)
 	arr = malloc(count * sizeof(int));
 	for (i = 0; i < count; i++)
 	{
-		arr[i] = tmp % 8;
+		ar[i] = tmp % 8;
 		tmp /= 8;
 	}
 	for (i = count - 1; i >= 0; i--)
 	{
-		_putchar(arr[i] + '0');
+		_putchar(ar[i] + '0');
 	}
-	free(arr);
+	free(ar);
 	return (count);
 }
