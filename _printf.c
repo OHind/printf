@@ -9,35 +9,35 @@
  */
 int print_operator(const char *format, fmt_st *print_arr, va_list list)
 {
-	char a;
+	char x;
 	int count = 0, b = 0, c = 0;
 
-	a = format[b];
-	while (a != '\0')
+	x = format[b];
+	while (x != '\0')
 	{
-		if (a == '%')
+		if (x == '%')
 		{
 			c = 0;
 			b++;
-			a = format[b];
+			x = format[b];
 			while (print_arr[c].type != NULL &&
-			       a != *(print_arr[c].type))
+			       x != *(print_arr[c].type))
 				c++;
 			if (print_arr[c].type != NULL)
 				count = count + print_arr[c].f(list);
 			else
 			{
-				if (a == '\0')
+				if (x == '\0')
 					return (-1);
-				if (a != '%')
+				if (x != '%')
 					count += _putchar('%');
-				count += _putchar(a);
+				count += _putchar(x);
 			}
 		}
 		else
-			count += _putchar(a);
+			count += _putchar(x);
 		b++;
-		a = format[b];
+		x = format[b];
 	}
 	return (count);
 }
@@ -50,7 +50,7 @@ int print_operator(const char *format, fmt_st *print_arr, va_list list)
 int _printf(const char *format, ...)
 {
 	va_list list;
-	int a = 0;
+	int x = 0;
 
 	fmt_st ops[] = {
 		{"c", print_char},
@@ -69,7 +69,7 @@ int _printf(const char *format, ...)
 	if (format == NULL)
 		return (-1);
 	va_start(list, format);
-	a = print_operator(format, ops, list);
+	x = print_operator(format, ops, list);
 	va_end(list);
-	return (a);
+	return (x);
 }
