@@ -7,7 +7,7 @@
  * @list: list of arguments
  * Return: numb of char to be printed
  */
-int print_operator(const char *format, fmt_st *print_arr, va_list list)
+int print_operator(const char *format, fmt_t *print_arr, va_list list)
 {
 	char x;
 	int count = 0, b = 0, c = 0;
