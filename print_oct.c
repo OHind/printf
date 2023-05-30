@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_oct - Print octal
- * @octo: list passed
+ * @oct: list passed
  * Return: updated count
  */
 int print_oct(va_list oct)
