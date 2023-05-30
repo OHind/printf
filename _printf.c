@@ -1,6 +1,4 @@
 #include "main.h"
-#include< stdarg.h>
-
 
 void print_buffer(char buffer[], int *buff_ind);
 
@@ -28,7 +26,7 @@ int _printf(const char *format, ...)
 		{
 			buffer[buff_i++] = format[i];
 			if (buff_i == BUFF_SIZE)
-				print_buffer(buffer, &buff_ind);
+				print_buffer(buffer, &buff_i);
 			print_chars++;
 		}
 		else
@@ -45,7 +43,7 @@ int _printf(const char *format, ...)
 			print_chars += p;
 		}
 	}
-	print_buffer(buffer, &buff_ind);
+	print_buffer(buffer, &buff_i);
 	va_end(list);
 	return (print_chars);
 }

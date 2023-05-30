@@ -6,8 +6,7 @@
  * @i: a parameter.
  * Return: flag.
  */
-/* - + 0 # ' ' */
-	/* 1 2 4 8  16 */
+
 int find_flags(const char *format, int *i)
 {
 	int j, k;
@@ -29,4 +28,3 @@ int find_flags(const char *format, int *i)
 	*i = k - 1;
 	return (flag);
 }
-
