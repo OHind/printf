@@ -18,7 +18,7 @@ typedef struct fmt
 
 int _printf(const char *format, ...);
 int print_operator(const char *format, fmt_t *print_arr, va_list list);
-int print_ch(va_list character);
+int print_char(va_list character);
 int print_str(va_list string);
 int print_int(va_list integ);
 int print_unsigned(va_list unsign);

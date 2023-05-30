@@ -52,7 +52,7 @@ int _printf(const char *format, ...)
 	va_list list;
 	int x = 0;
 
-	fmt_st ops[] = {
+	fmt_t ops[] = {
 		{"c", print_char},
 		{"s", print_str},
 		{"d", print_int},

@@ -17,7 +17,7 @@ int print_oct(va_list oct)
 		count++;
 	}
 	count++;
-	arr = malloc(count * sizeof(int));
+	ar = malloc(count * sizeof(int));
 	for (i = 0; i < count; i++)
 	{
 		ar[i] = tmp % 8;
