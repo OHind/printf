@@ -26,7 +26,7 @@ int print_int(va_list integ)
 		b *= 10;
 	while (b != 0)
 	{
-		len = len + _putchar(n / b + '0');
+		len = len + _putchar(x / b + '0');
 		x = x % b;
 		b = b / 10;
 	}
